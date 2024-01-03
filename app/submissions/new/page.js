@@ -172,7 +172,7 @@ function ApartmentSearchForm() {
       ) : (
         <>
           <h2 className="text-center text-2xl font-bold mb-8">
-            Post your preferences:
+            Submit your preferences:
           </h2>
 
           <form onSubmit={handleSubmit}>

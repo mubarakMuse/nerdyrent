@@ -26,6 +26,9 @@ const NavBar = () => {
               <li>
                 <a href="/deals">Deals</a>
               </li> */}
+              <li>
+                <a href="https://forms.gle/omwCxkz1YUAmLiMb9">Looking For Tentnts</a>
+              </li>
             </ul>
           </div>
         </div>
