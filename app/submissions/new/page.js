@@ -1,8 +1,7 @@
-"use client"
+"use client";
 import React, { useState } from "react";
 import Select from "react-select"; // Install this library
 import { SupabaseClient } from "@supabase/supabase-js";
-
 
 import GoogleMapsAutocomplete from "@/components/GoogleMapsAutocomplete";
 // import { supabase } from "./supabase"; // Import your Supabase client instance
@@ -22,11 +21,10 @@ function ApartmentSearchForm() {
     amenities: [],
     additionalDetails: "",
   });
-  
+
   const [submissionMessage, setSubmissionMessage] = useState("");
   const [id, setId] = useState(null);
-    const [places, setPlaces] = useState([""]);
-
+  const [places, setPlaces] = useState([""]);
 
   const supabase = new SupabaseClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL,
@@ -123,7 +121,7 @@ function ApartmentSearchForm() {
           amenities: [],
           additionalDetails: "",
         });
-        setPlaces([])
+        setPlaces([]);
       }
     } catch (error) {
       console.error("Error:", error);
@@ -161,8 +159,8 @@ function ApartmentSearchForm() {
   };
 
   return (
-    <div className=" mx-auto p-6 border bg-base-100 border-gray-300">
-    {submissionMessage ? (
+    <div className="mx-auto m-4 p-6 max-w-4xl bg-white border border-gray-200 rounded-lg shadow-lg">
+      {submissionMessage ? (
         <>
           <h2 className="text-center text-2xl font-bold mb-8">
             Submission Status
@@ -171,11 +169,11 @@ function ApartmentSearchForm() {
         </>
       ) : (
         <>
-          <h2 className="text-center text-2xl font-bold mb-8">
+      <h2 className="text-center text-3xl font-semibold text-gray-800 mb-6">
             Submit your preferences:
           </h2>
 
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} className="space-y-6">
             {/* Location */}
             <div className="mb-4">
               <label
@@ -184,19 +182,7 @@ function ApartmentSearchForm() {
               >
                 Location(s):
               </label>
-              {/* <Select
-                id="location"
-                name="location"
-                value={formData.location}
-                onChange={handleLocationChange}
-                options={cityOptions}
-                placeholder="Select cities..."
-                isMulti
-                isSearchable
-                required
-                className="mt-1 p-2 w-full border rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
-              /> */}
-              <GoogleMapsAutocomplete places={places} setPlaces={setPlaces}/>
+              <GoogleMapsAutocomplete places={places} setPlaces={setPlaces} />
             </div>
 
             <div className="grid grid-cols-2 gap-4 mb-4">
@@ -359,7 +345,7 @@ function ApartmentSearchForm() {
                 htmlFor="email"
                 className="block text-gray-800 font-bold mb-2"
               >
-                Email:
+                Email (won&apos;t be shared):
               </label>
               <input
                 type="email"
@@ -411,8 +397,8 @@ function ApartmentSearchForm() {
             <div className="text-center">
               <button
                 type="submit"
-                className="bg-black hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-full focus:outline-none focus:ring focus:ring-blue-300"
-              >
+                className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-6 rounded-full focus:outline-none focus:ring-2 focus:ring-green-300 transition duration-150"
+                >
                 Submit
               </button>
             </div>

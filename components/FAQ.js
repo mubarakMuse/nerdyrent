@@ -7,25 +7,39 @@ import { useRef, useState } from "react";
 
 const faqList = [
   {
-    question: "What do I get exactly?",
-    answer: <div className="space-y-2 leading-relaxed">Loreum Ipseum</div>,
+    question: "How do we get started?",
+    answer: (
+      <div className="space-y-2 leading-relaxed">
+        Click <a className="text-blue-600 hover:underline" href="/submissions/new">here to fill out the form</a> and get started. It only takes about 2 minutes.
+      </div>
+    ),
   },
   {
-    question: "Can I get a refund?",
+    question: "Is this service free?",
     answer: (
       <p>
-        Yes! You can request a refund within 7 days of your purchase. Reach out
-        by email.
+        Absolutely! Our platform is free for users. We generate revenue by providing apartment managers with access to our users&apos; submissions, allowing them to reach out with offers.
       </p>
     ),
   },
   {
-    question: "I have another question",
+    question: "Is my data secure with your service?",
     answer: (
-      <div className="space-y-2 leading-relaxed">Cool, contact us by email</div>
+      <div className="space-y-2 leading-relaxed">
+        Absolutely. We take data security very seriously and implement industry-standard security measures to protect your information. Our servers are encrypted, and we regularly update our protocols to ensure the safety of your data.
+      </div>
+    ),
+  },
+  {
+    question: "I have another question. How can I contact you?",
+    answer: (
+      <div className="space-y-2 leading-relaxed">
+        No problem, feel free to email us at <a className="text-blue-600 hover:underline" href="mailto:nerdyrent@gmail.com">nerdyrent@gmail.com</a>.
+      </div>
     ),
   },
 ];
+
 
 const Item = ({ item }) => {
   const accordion = useRef(null);
@@ -89,7 +103,7 @@ const Item = ({ item }) => {
 
 const FAQ = () => {
   return (
-    <section className="bg-base-200" id="faq">
+    <section className="bg-white" id="faq">
       <div className="py-24 px-8 max-w-7xl mx-auto flex flex-col md:flex-row gap-12">
         <div className="flex flex-col text-left basis-1/2">
           <p className="inline-block font-semibold text-primary mb-4">FAQ</p>
