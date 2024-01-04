@@ -28,12 +28,26 @@ export default function RootLayout({ children }) {
           <PlausibleProvider domain={config.domainName} />
         </head>
       )}
+      <Script
+        strategy="lazyOnload"
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
+      />
+
+      <Script strategy="lazyOnload">
+        {`
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', '${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}', {
+                    page_path: window.location.pathname,
+                    });
+                `}
+      </Script>
       <body>
-        <NavBar/>
+        <NavBar />
         {/* ClientLayout contains all the client wrappers (Crisp chat support, toast messages, tooltips, etc.) */}
         <ClientLayout>{children}</ClientLayout>
-        <Footer/>
-
+        <Footer />
       </body>
     </html>
   );
