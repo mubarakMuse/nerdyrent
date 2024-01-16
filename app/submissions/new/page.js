@@ -103,7 +103,7 @@ function ApartmentSearchForm() {
       } else {
         const submissionLink = `/submissions/${data[0].id}`;
         setSubmissionMessage(
-          `Thank you, ${formData.name}! Your request has been submitted successfully. Apartments that have units matching your request will leave a message here: nerdyrent.com${submissionLink}`
+          `Thank you, ${formData.name}! Your request has been submitted successfully. Apartments that have units matching your request will leave a message here: supereasyrent.com${submissionLink}`
         );
         setId(data[0].id);
         window.open(submissionLink, "_blank");

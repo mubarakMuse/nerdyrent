@@ -2,12 +2,12 @@ import themes from "daisyui/src/theming/themes.js";
 
 const config = {
   // REQUIRED
-  appName: "NerdyRent",
+  appName: "Super Easy Rent",
   // REQUIRED: a short description of your app for SEO tags (can be overwritten)
   appDescription:
     "The easiest way to find an apartemnt on the internet.",
   // REQUIRED (no https://, not trialing slash at the end, just the naked domain)
-  domainName: "nerdyrent.com",
+  domainName: "supereasyrent.com",
   crisp: {
     // Crisp website ID. IF YOU DON'T USE CRISP: just remove this => Then add a support email in this config file (mailgun.supportEmail) otherwise customer support won't work.
     id: "",

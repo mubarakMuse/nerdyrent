@@ -34,7 +34,7 @@ const faqList = [
     question: "I have another question. How can I contact you?",
     answer: (
       <div className="space-y-2 leading-relaxed">
-        No problem, feel free to email us at <a className="text-blue-600 hover:underline" href="mailto:nerdyrent@gmail.com">nerdyrent@gmail.com</a>.
+        No problem, feel free to email us at <a className="text-blue-600 hover:underline" href="mailto:supereasyrent1@gmail.com">SuperEasyRent1@gmail.com</a>.
       </div>
     ),
   },
