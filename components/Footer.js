@@ -26,7 +26,7 @@ const Footer = () => {
                 height={24}
               />
               <div className="lg:px-1 px-1 font-serif lg:text-2xl text-lg">
-            <span className="text-Blue-600 font-bold">SuperEasy</span>
+            <span className="text-blue-600 font-bold">SuperEasy</span>
             <span className="text-gray-900 font-bold">Rent</span>
           </div>
             </Link>

@@ -17,7 +17,7 @@ const NavBar = () => {
             width={24}
             height={24}
           />
-          <a href="/" className="lg:px-1 px-1 font-serif lg:text-2xl text-lg">
+          <a href="/" className="lg:px-1 px-1 font-serif lg:text-lg text-md">
             <span className="text-blue-600 font-bold">SuperEasy</span>
             <span className="text-gray-900 font-bold">Rent</span>
           </a>
@@ -32,7 +32,7 @@ const NavBar = () => {
               </li> */}
             <li>
               <a href="https://forms.gle/omwCxkz1YUAmLiMb9">
-                Add your apartment
+                List Apartment
               </a>
             </li>
           </ul>
