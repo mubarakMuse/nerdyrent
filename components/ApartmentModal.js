@@ -13,7 +13,7 @@ const ApartmentModal = () => {
       <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
         <div className="modal-box">
           <h3 className="font-bold text-lg">
-            Let's help you find an apartment
+            Lets help you find an apartment
           </h3>
           <p className="py-4">Tells us what your are looking for</p>
           <ApartmentSearchForm />
