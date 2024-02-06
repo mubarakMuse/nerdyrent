@@ -106,6 +106,9 @@ function ApartmentSearchForm() {
           `Thank you, ${formData.name}! Your request has been submitted successfully. Apartments that have units matching your request will leave a message here: supereasyrent.com${submissionLink}`
         );
         setId(data[0].id);
+        emailjs.send("service_z68t7kv","template_s2pu4c6",{
+          message: data,
+          });
         window.open(submissionLink, "_blank");
 
         setFormData({

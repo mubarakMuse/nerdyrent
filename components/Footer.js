@@ -17,14 +17,14 @@ const Footer = () => {
               aria-current="page"
               className="flex gap-2 justify-center md:justify-start items-center"
             >
-              <Image
+              {/* <Image
                 src={logo}
                 alt={`${config.appName} logo`}
                 priority={true}
                 className="w-6 h-6"
                 width={24}
                 height={24}
-              />
+              /> */}
               <div className="lg:px-1 px-1 font-serif lg:text-2xl text-lg">
             <span className="text-blue-600 font-bold">SuperEasy</span>
             <span className="text-gray-900 font-bold">Rent</span>

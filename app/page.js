@@ -22,9 +22,9 @@ const Deals = () => {
         </p>
         <button
           className="bg-blue-500 hover:bg-blue-600 text-white text-sm py-2 px-4 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-300 transition duration-150"
-          onClick={handleButtonClick}
+          onClick={()=> window.open("https://forms.gle/pnxkBbjqixhsugGc7", "_blank")}
         >
-          Help me find an Apartment ($99)
+          Help me find an Apartment [$100]
         </button>
       </div>
       <div className="">

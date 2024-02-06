@@ -5,7 +5,7 @@ const config = {
   appName: "Super Easy Rent",
   // REQUIRED: a short description of your app for SEO tags (can be overwritten)
   appDescription:
-    "The easiest way to find an apartemnt on the internet.",
+    "The quickest way to find the best apartemnt deals on the internet.",
   // REQUIRED (no https://, not trialing slash at the end, just the naked domain)
   domainName: "supereasyrent.com",
   crisp: {

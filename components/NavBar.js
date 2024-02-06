@@ -9,14 +9,14 @@ const NavBar = () => {
     <div>
       <div className="navbar border font-serif bg-base-100">
         <div className="flex-1">
-          <Image
+          {/* <Image
             src={logo}
             alt={`${config.appName} logo`}
             priority={true}
             className="w-6 h-6"
             width={24}
             height={24}
-          />
+          /> */}
           <a href="/" className="lg:px-1 px-1 font-serif lg:text-lg text-md">
             <span className="text-blue-600 font-bold">SuperEasy</span>
             <span className="text-gray-900 font-bold">Rent</span>
