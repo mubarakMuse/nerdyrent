@@ -26,7 +26,9 @@ export default function RootLayout({ children }) {
       {config.domainName && (
         <head>
           <PlausibleProvider domain={config.domainName} />
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-HQ7G8QGVQB"></script>
+          {/* <script async src="https://www.googletagmanager.com/gtag/js?id=G-HQ7G8QGVQB"></script> */}
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5J2L99EF3R"></script>
+
 
         </head>
       )}
