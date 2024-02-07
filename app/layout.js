@@ -25,20 +25,23 @@ export default function RootLayout({ children }) {
     <html lang="en" data-theme={config.colors.theme} className={font.className}>
       {config.domainName && (
         <head>
-          <PlausibleProvider domain={config.domainName} />
-          <script
-            async
-            src="https://www.googletagmanager.com/gtag/js?id=G-5J2L99EF3R"
-          ></script>
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-5J2L99EF3R"></script>
+          <script dangerouslySetInnerHTML={{
+            __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
 
-          <script id="google-analytics">
-            {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-5J2L99EF3R');
-          `}
-          </script>
+                gtag('config', 'G-5J2L99EF3R', {
+                  page_path: window.location.pathname,
+                });
+                `
+            ,
+          }}
+          />
+
+
+
         </head>
       )}
       <body>
@@ -46,6 +49,7 @@ export default function RootLayout({ children }) {
         {/* ClientLayout contains all the client wrappers (Crisp chat support, toast messages, tooltips, etc.) */}
         <ClientLayout>{children}</ClientLayout>
         <Footer />
+
       </body>
     </html>
   );
