@@ -26,19 +26,19 @@ export default function RootLayout({ children }) {
       {config.domainName && (
         <head>
           <PlausibleProvider domain={config.domainName} />
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-5J2L99EF3R"></script>
-         
-        <Script id="google-analytics">
-          {`
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=G-5J2L99EF3R"
+          ></script>
+
+          <script id="google-analytics">
+            {`
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
               gtag('config', 'G-5J2L99EF3R');
           `}
-        </Script>
-
-
-
+          </script>
         </head>
       )}
       <body>
@@ -46,7 +46,6 @@ export default function RootLayout({ children }) {
         {/* ClientLayout contains all the client wrappers (Crisp chat support, toast messages, tooltips, etc.) */}
         <ClientLayout>{children}</ClientLayout>
         <Footer />
-
       </body>
     </html>
   );
